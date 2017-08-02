@@ -1,7 +1,9 @@
-#include <cstdio>
+#include <iostream>
 
 int main()
 {
-    printf("hello from PIC!\n");
-    return 0;
+	int x = 9;
+	std::cout << x << std::endl;
+	std::cout << "This is some more text" << std::endl;
+	return 0;
 }
