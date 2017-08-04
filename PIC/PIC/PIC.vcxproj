@@ -105,6 +105,9 @@
     <ClInclude Include="VectorParticle.h" />
     <ClInclude Include="VectorPatch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="inputs.txt" />
+  </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

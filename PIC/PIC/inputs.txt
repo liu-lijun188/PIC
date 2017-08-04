@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a sample input file. Lines that begin with the percentage symbol will 
+% not be parsed. Empty lines will also not be parsed. The remaining lines contain
+% the names of variables, followed by a colon, then the expected value. Variable
+% names or their order should not be edited. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This is a set of 5 integer variables
+variable1: 5
+variable2: 22
+variable3: 3
+variable4: -4
+variable5: 50
+
+% This is a set of three double variables
+variable6: 6.1
+variable7: 7.25
+variable8: 8e3
+
+% This is a set of two string variables, with a 
+% comment over two lines and an extra empty line
+
+variable9: HelloWorld
+variable10: documents/folder/sub_folder/file.extension
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of input file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

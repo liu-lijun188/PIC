@@ -45,4 +45,7 @@
     <ClInclude Include="Cell.h" />
     <ClInclude Include="VectorCell.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="inputs.txt" />
+  </ItemGroup>
 </Project>
