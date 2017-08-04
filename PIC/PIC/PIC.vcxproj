@@ -61,9 +61,49 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="ChargeProjector.cpp" />
+    <ClCompile Include="Face.cpp" />
+    <ClCompile Include="FDTD.cpp" />
+    <ClCompile Include="FieldInterpolator.cpp" />
+    <ClCompile Include="FieldSolver.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MCC.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Parameters.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticlePusher.cpp" />
+    <ClCompile Include="Patch.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="VectorCell.cpp" />
+    <ClCompile Include="VectorFace.cpp" />
+    <ClCompile Include="VectorNode.cpp" />
+    <ClCompile Include="VectorParticle.cpp" />
+    <ClCompile Include="VectorPatch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="ChargeProjector.h" />
+    <ClInclude Include="Face.h" />
+    <ClInclude Include="FDTD.h" />
+    <ClInclude Include="FieldInterpolator.h" />
+    <ClInclude Include="FieldSolver.h" />
+    <ClInclude Include="MCC.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Parameters.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticlePusher.h" />
+    <ClInclude Include="Patch.h" />
+    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="VectorCell.h" />
+    <ClInclude Include="VectorFace.h" />
+    <ClInclude Include="VectorNode.h" />
+    <ClInclude Include="VectorParticle.h" />
+    <ClInclude Include="VectorPatch.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
