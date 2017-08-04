@@ -60,6 +60,9 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AdditionalSourcesToCopyMapping>C:\Users\rahul_000\Source\Repos\PIC\PIC\PIC\inputs.txt;$(AdditionalSourcesToCopyMapping)</AdditionalSourcesToCopyMapping>
+  </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="ChargeProjector.cpp" />

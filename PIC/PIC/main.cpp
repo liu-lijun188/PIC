@@ -5,9 +5,9 @@ int main()
 {
 
 	Parameters parametersList("inputs.txt");
-	//parametersList.printValuesVector();
-	//parametersList.distributeInputs();
-	//parametersList.printMemberVariables();
+	parametersList.printValuesVector();
+	parametersList.distributeInputs();
+	parametersList.printMemberVariables();
 
 	Simulation simulation();
 

@@ -14,6 +14,7 @@ private:
 	int var1, var2, var3, var4, var5;
 	double var6, var7, var8;
 	string var9, var10;
+	bool fileNotOpened = false;
 public:
 	Parameters(string filename);	// Default constructor, reads input file and dumps data in valuesVector
 	~Parameters();
