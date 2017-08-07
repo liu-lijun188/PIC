@@ -1,15 +1,13 @@
 #include "Simulation.h"
-#include "Parameters.h"
 
 int main()
 {
 
 	Parameters parametersList("inputs.txt");
-	parametersList.printValuesVector();
 	parametersList.distributeInputs();
 	parametersList.printMemberVariables();
 
-	Simulation simulation();
+	Simulation simulation(parametersList);
 
 	return 0;
 }

@@ -1,8 +1,13 @@
 #pragma once
+#include "Patch.h"
+#include <vector>
+
 class VectorPatch
 {
 public:
-	VectorPatch();
+	VectorPatch(int numberOfPatches);
 	~VectorPatch();
+
+	vector<Patch> patchesVector;
 };
 

@@ -5,23 +5,13 @@
 % names or their order should not be edited. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% This is a set of 5 integer variables
-variable1: 5
-variable2: 22
-variable3: 3
-variable4: -4
-variable5: 50
+% Some variables
+timeStep: 0.1
+maximumNumberOfIterations: 100 
+numberOfPatches: 3
 
-% This is a set of three double variables
-variable6: 6.1
-variable7: 7.25
-variable8: 8e3
-
-% This is a set of two string variables, with a 
-% comment over two lines and an extra empty line
-
-variable9: HelloWorld
-variable10: documents/folder/sub_folder/file.extension
+% Some paths
+meshFilePath: meshData.txt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End of input file
