@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Parameters.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="VectorPatch.cpp" />
+    <ClCompile Include="Patch.cpp" />
+    <ClCompile Include="VectorParticle.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ChargeProjector.cpp" />
+    <ClCompile Include="FieldSolver.cpp" />
+    <ClCompile Include="FieldInterpolator.cpp" />
+    <ClCompile Include="ParticlePusher.cpp" />
+    <ClCompile Include="FDTD.cpp" />
+    <ClCompile Include="MCC.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="VectorNode.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="VectorFace.cpp" />
+    <ClCompile Include="Face.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="VectorCell.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="Parameters.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="VectorPatch.h" />
+    <ClInclude Include="Patch.h" />
+    <ClInclude Include="VectorParticle.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ChargeProjector.h" />
+    <ClInclude Include="FieldSolver.h" />
+    <ClInclude Include="FieldInterpolator.h" />
+    <ClInclude Include="ParticlePusher.h" />
+    <ClInclude Include="FDTD.h" />
+    <ClInclude Include="MCC.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="VectorNode.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="VectorFace.h" />
+    <ClInclude Include="Face.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="VectorCell.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="inputs.txt" />
+  </ItemGroup>
+</Project>
