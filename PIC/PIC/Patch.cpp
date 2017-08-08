@@ -1,7 +1,8 @@
 #include "Patch.h"
 
-Patch::Patch()
+Patch::Patch(Parameters parametersList)
 {
+	cout << "Initialising patch..." << endl;
 }
 
 
@@ -9,7 +10,7 @@ Patch::~Patch()
 {
 }
 
-void Patch::initialisePatch()
+void Patch::startPIC()
 {
-	cout << "Initialising patch..." << endl;
+	cout << "Starting PIC..." << endl;
 }

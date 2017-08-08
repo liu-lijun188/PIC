@@ -57,7 +57,7 @@ void Parameters::printValuesVector()
 {
 	if (valuesVector.size() != 0)
 	{
-		for (size_t i = 0; i < (valuesVector.size()); i++)
+		for (size_t i = 0; i < valuesVector.size(); i++)
 		{
 			cout << "Parameter " << i + 1 << " is: " << valuesVector[i] << endl;
 		}

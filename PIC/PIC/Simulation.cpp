@@ -4,7 +4,8 @@ Simulation::Simulation(Parameters parametersList)
 {
 	cout << "Starting simulation..." << endl;
 	Timer newTimer;
-	VectorPatch patchesVector(parametersList.numberOfPatches);
+	VectorPatch patchesVector(parametersList);
+	patchesVector.startPIC();
 }
 
 Simulation::~Simulation()

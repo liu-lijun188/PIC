@@ -5,8 +5,9 @@
 class VectorPatch
 {
 public:
-	VectorPatch(int numberOfPatches);
+	VectorPatch(Parameters parametersList);
 	~VectorPatch();
+	void startPIC();
 
 	vector<Patch> patchesVector;
 };

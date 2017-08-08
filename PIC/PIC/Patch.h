@@ -1,13 +1,25 @@
 #pragma once
 #include <iostream>
+#include "ChargeProjector.h"
+#include "FDTD.h"
+#include "FieldInterpolator.h"
+#include "FieldSolver.h"
+#include "MCC.h"
+#include "Mesh.h"
+#include "Parameters.h"
+#include "ParticlePusher.h"
+#include "VectorParticle.h"
 
 using namespace std;
 
 class Patch
 {
 public:
-	Patch();
+	Patch(Parameters parametersList);
 	~Patch();
-	void initialisePatch();
+	void startPIC();
+
+	Mesh mesh;
+	VectorParticle particlesVector;
 };
 
