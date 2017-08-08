@@ -1,7 +1,12 @@
 #include "Parameters.h"
 
+Parameters::Parameters()
+{
+}
+
 Parameters::Parameters(string filename)
 {
+	initialTime = clock();
 	ifstream inputFile(filename);	// Open input file
 	
 	char firstCharacter;
@@ -10,24 +15,16 @@ Parameters::Parameters(string filename)
 
 	if (inputFile.is_open())
 	{
-		cout << "Processing parameters" << endl;
+		logMessages("Processing parameters...");
 
 		while (!inputFile.eof())	// Until the end of the file is reached
 		{
 			// Check what the first character in each line is
 			firstCharacter = static_cast<char>(inputFile.get());
-			// cout << "First character is: " << firstCharacter << endl;
 
-			// Check for commented lines
-			if (firstCharacter == '%')
+			// Check for commented or empty lines
+			if (firstCharacter == '%' || firstCharacter == '\r')
 			{
-				// cout << "Ran into a comment!!!" << endl;
-				inputFile.ignore(256, '\n');
-			}
-			// Check for empty lines 
-			else if (firstCharacter == '\r')
-			{
-				// cout << "Ran into an empty line!!!" << endl;
 				inputFile.ignore(256, '\n');
 			}
 			// Store values in a string vector, names and values are space separated
@@ -35,7 +32,6 @@ Parameters::Parameters(string filename)
 			{
 				inputFile >> name >> value;
 				valuesVector.push_back(value);
-				// cout << "Value is: " << value << endl;
 				inputFile.ignore(256, '\n');
 			}
 		}
@@ -43,10 +39,9 @@ Parameters::Parameters(string filename)
 	}
 	else
 	{
-		cout << "Unable to open input file" << endl;
+		logMessages("Unable to open input file");
 		fileNotOpened = true;
 	}
-	cout << "Number of input parameters is: " << valuesVector.size() << endl;
 }
 
 Parameters::~Parameters()
@@ -75,7 +70,7 @@ void Parameters::distributeInputs()
 		}
 		catch (invalid_argument&)
 		{
-			cout << "Invalid argument detected for time step!!!" << endl;
+			logMessages("Invalid argument detected for time step!!!");
 		}
 
 		try
@@ -84,7 +79,7 @@ void Parameters::distributeInputs()
 		}
 		catch (invalid_argument&)
 		{
-			cout << "Invalid argument detected for maximum number of iterations!!!" << endl;
+			logMessages("Invalid argument detected for maximum number of iterations!!!");
 		}
 		
 		try
@@ -93,7 +88,7 @@ void Parameters::distributeInputs()
 		}
 		catch (invalid_argument&)
 		{
-			cout << "Invalid argument detected for number of patches!!!" << endl;
+			logMessages("Invalid argument detected for number of patches!!!");
 		}
 		
 		try
@@ -102,7 +97,7 @@ void Parameters::distributeInputs()
 		}
 		catch (invalid_argument&)
 		{
-			cout << "Invalid argument detected for mesh file path!!!" << endl;
+			logMessages("Invalid argument detected for mesh file path!!!");
 		}
 	}
 }
@@ -120,4 +115,42 @@ void Parameters::hitReturnToEnter()
 	do {
 		cout << endl << "Press the return key to continue . . .";
 	} while (cin.get() != '\n');
+}
+
+void Parameters::logMessages(string message)
+{
+	if (!firstLog)
+	{
+		ofstream logFile("logFile.txt", ios::app);	// Open log file
+
+		if (logFile.is_open())
+		{
+			currentTime = clock() - initialTime;
+			logFile << static_cast<float>(currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
+			logFile.close();
+		}
+		else
+		{
+			cout << "Unable to open log file" << endl;
+		}
+		cout << message << endl;
+	}
+	else
+	{
+		ofstream logFile("logFile.txt", ios::trunc);	// Open log file
+
+		if (logFile.is_open())
+		{
+			
+			currentTime = clock() - initialTime;
+			logFile << static_cast<float>(currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
+			logFile.close();
+		}
+		else
+		{
+			cout << "Unable to open log file" << endl;
+		}
+		firstLog = false;
+	}
+
 }

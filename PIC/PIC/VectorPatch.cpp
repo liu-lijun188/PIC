@@ -2,7 +2,7 @@
 
 VectorPatch::VectorPatch(Parameters parametersList)
 {
-	cout << "Creating patches vector..." << endl;
+	parametersList.logMessages("Creating patches vector...");
 	for (int i = 0; i < parametersList.numberOfPatches; i++)
 	{
 		cout << "Patch " << i << endl;

@@ -19,6 +19,7 @@ public:
 	~Patch();
 	void startPIC();
 
+	Parameters localParametersList;
 	Mesh mesh;
 	VectorParticle particlesVector;
 };

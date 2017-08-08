@@ -2,7 +2,8 @@
 
 Patch::Patch(Parameters parametersList)
 {
-	cout << "Initialising patch..." << endl;
+	localParametersList = parametersList;
+	localParametersList.logMessages("Initialising patch...");
 }
 
 
@@ -12,5 +13,5 @@ Patch::~Patch()
 
 void Patch::startPIC()
 {
-	cout << "Starting PIC..." << endl;
+	localParametersList.logMessages("Starting PIC loop...");
 }

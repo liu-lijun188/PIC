@@ -2,7 +2,7 @@
 
 Simulation::Simulation(Parameters parametersList)
 {
-	cout << "Starting simulation..." << endl;
+	parametersList.logMessages("Starting simulation...");
 	Timer newTimer;
 	VectorPatch patchesVector(parametersList);
 	patchesVector.startPIC();
