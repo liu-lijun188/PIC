@@ -1,7 +1,5 @@
 #include "ChargeProjector.h"
 
-
-
 ChargeProjector::ChargeProjector()
 {
 }

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Parameters.h"
 #include "Timer.h"
 #include "VectorPatch.h"
@@ -10,4 +11,3 @@ public:
 	~Simulation();
 	void loadBalance();
 };
-

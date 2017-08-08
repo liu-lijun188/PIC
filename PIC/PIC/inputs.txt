@@ -9,6 +9,7 @@
 timeStep: 0.1
 maximumNumberOfIterations: 100 
 numberOfPatches: 3
+particlesPerPatch: 10
 
 % Some paths
 meshFilePath: meshData.txt

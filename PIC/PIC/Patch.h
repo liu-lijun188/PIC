@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include "ChargeProjector.h"
 #include "FDTD.h"
@@ -23,4 +24,3 @@ public:
 	Mesh mesh;
 	VectorParticle particlesVector;
 };
-

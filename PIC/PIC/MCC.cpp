@@ -1,7 +1,5 @@
 #include "MCC.h"
 
-
-
 MCC::MCC()
 {
 }

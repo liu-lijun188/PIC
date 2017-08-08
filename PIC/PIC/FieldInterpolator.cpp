@@ -1,7 +1,5 @@
 #include "FieldInterpolator.h"
 
-
-
 FieldInterpolator::FieldInterpolator()
 {
 }

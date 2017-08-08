@@ -1,7 +1,5 @@
 #include "FieldSolver.h"
 
-
-
 FieldSolver::FieldSolver()
 {
 }

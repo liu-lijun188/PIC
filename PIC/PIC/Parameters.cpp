@@ -93,7 +93,16 @@ void Parameters::distributeInputs()
 		
 		try
 		{
-			meshFilePath = valuesVector[3];
+			particlesPerPatch = stoi(valuesVector[3]);
+		}
+		catch (invalid_argument&)
+		{
+			logMessages("Invalid argument detected for particles per patch!!!");
+		}
+
+		try
+		{
+			meshFilePath = valuesVector[4];
 		}
 		catch (invalid_argument&)
 		{
@@ -107,6 +116,7 @@ void Parameters::printMemberVariables()
 	cout << "Time step: " << timeStep << endl;
 	cout << "Maximum number of iterations: " << maximumNumberOfIterations << endl;
 	cout << "Number of patches: " << numberOfPatches << endl;
+	cout << "Particle per patch: " << particlesPerPatch << endl;
 	cout << "Mesh file path: " << meshFilePath << endl;
 }
 

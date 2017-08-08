@@ -1,11 +1,8 @@
 #include "Particle.h"
 
-
-
-Particle::Particle()
+Particle::Particle(Parameters *localParametersList)
 {
 }
-
 
 Particle::~Particle()
 {

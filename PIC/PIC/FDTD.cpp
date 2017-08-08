@@ -1,7 +1,5 @@
 #include "FDTD.h"
 
-
-
 FDTD::FDTD()
 {
 }

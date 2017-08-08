@@ -1,7 +1,5 @@
 #include "VectorCell.h"
 
-
-
 VectorCell::VectorCell()
 {
 }

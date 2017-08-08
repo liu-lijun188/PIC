@@ -1,7 +1,5 @@
 #include "VectorNode.h"
 
-
-
 VectorNode::VectorNode()
 {
 }

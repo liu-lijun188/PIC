@@ -1,7 +1,5 @@
 #include "VectorFace.h"
 
-
-
 VectorFace::VectorFace()
 {
 }

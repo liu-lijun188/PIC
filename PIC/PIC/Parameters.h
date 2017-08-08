@@ -1,4 +1,5 @@
 #pragma once
+
 #include <ctime>
 #include <exception>
 #include <fstream>
@@ -28,7 +29,7 @@ public:
 	void logMessages(string message);
 
 	double timeStep;
-	int maximumNumberOfIterations, numberOfPatches;
+	int maximumNumberOfIterations, numberOfPatches, particlesPerPatch;
 	string meshFilePath;
 
 };

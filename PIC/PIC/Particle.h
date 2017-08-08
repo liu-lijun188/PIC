@@ -1,8 +1,12 @@
 #pragma once
+
+#include "Parameters.h"
+
+using namespace std;
+
 class Particle
 {
 public:
-	Particle();
+	Particle(Parameters *localParametersList);
 	~Particle();
 };
-

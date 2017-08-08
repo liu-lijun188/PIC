@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Patch.h"
 #include <vector>
 
@@ -11,4 +12,3 @@ public:
 
 	vector<Patch> patchesVector;
 };
-

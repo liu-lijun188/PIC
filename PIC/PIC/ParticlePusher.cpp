@@ -1,7 +1,5 @@
 #include "ParticlePusher.h"
 
-
-
 ParticlePusher::ParticlePusher()
 {
 }
