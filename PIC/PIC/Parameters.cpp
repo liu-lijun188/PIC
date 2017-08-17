@@ -118,6 +118,7 @@ void Parameters::printMemberVariables()
 	cout << "Number of patches: " << numberOfPatches << endl;
 	cout << "Particle per patch: " << particlesPerPatch << endl;
 	cout << "Mesh file path: " << meshFilePath << endl;
+	precessingGridFLUENT(meshFilePath, processedMesh);
 }
 
 void Parameters::hitReturnToEnter()
@@ -136,7 +137,7 @@ void Parameters::logMessages(string message)
 		if (logFile.is_open())
 		{
 			currentTime = clock() - initialTime;
-			logFile << static_cast<float>(currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
+			logFile << static_cast<float>(1000 * currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
 			logFile.close();
 		}
 		else
@@ -153,7 +154,7 @@ void Parameters::logMessages(string message)
 		{
 			
 			currentTime = clock() - initialTime;
-			logFile << static_cast<float>(currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
+			logFile << static_cast<float>(1000 * currentTime) / CLOCKS_PER_SEC << ' ' << message << endl;
 			logFile.close();
 		}
 		else

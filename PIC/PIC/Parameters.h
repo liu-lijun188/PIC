@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 
+#include "GRID/grid.hpp"
+
 using namespace std;
 
 class Parameters
@@ -31,5 +33,6 @@ public:
 	double timeStep;
 	int maximumNumberOfIterations, numberOfPatches, particlesPerPatch;
 	string meshFilePath;
+	string processedMesh = "processedMesh";
 
 };

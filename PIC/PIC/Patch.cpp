@@ -16,5 +16,13 @@ Patch::~Patch()
 void Patch::startPIC()
 {
 	localParametersList.logMessages("Starting PIC loop...");
-
+	for (int i = 0; i < localParametersList.maximumNumberOfIterations; i++)
+	{
+		ParticlePusher pusher();
+		MCC collisions();
+		ChargeProjector projector();
+		FDTD fdtd();
+		FieldSolver solver();
+		FieldInterpolator interpolator();
+	}
 }
