@@ -118,7 +118,7 @@ void Parameters::printMemberVariables()
 	cout << "Number of patches: " << numberOfPatches << endl;
 	cout << "Particle per patch: " << particlesPerPatch << endl;
 	cout << "Mesh file path: " << meshFilePath << endl;
-	precessingGridFLUENT(meshFilePath, processedMesh);
+	precessingGridSU2(meshFilePath, processedMesh);
 }
 
 void Parameters::hitReturnToEnter()

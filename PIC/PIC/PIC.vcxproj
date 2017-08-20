@@ -164,6 +164,7 @@
     <None Include="gridFile.tgf" />
     <None Include="gridFile.tin" />
     <None Include="gridFile.uns" />
+    <None Include="meshFile2.su2" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
@@ -172,7 +173,7 @@
       <AdditionalDependencies>$(StlAdditionalDependencies);%(AdditionalDependencies);$(RemoteRootDir)/$(ProjectName)/libgrid.a;$(RemoteRootDir)/$(ProjectName)/libcomm.a;$(RemoteRootDir)/$(ProjectName)/libmathmk.a</AdditionalDependencies>
     </Link>
     <RemotePostBuildEvent>
-      <Command>cp $(RemoteProjectDir)/{inputs.txt,gridFile.su2,gridFile.cas,gridFile.cgns,gridFile.msh,gridFile.poly,gridFile.tgf,gridFile.tin,gridFile.uns} $(RemoteOutDir)</Command>
+      <Command>cp $(RemoteProjectDir)/{inputs.txt,meshFile2.su2,gridFile.su2,gridFile.cas,gridFile.cgns,gridFile.msh,gridFile.poly,gridFile.tgf,gridFile.tin,gridFile.uns} $(RemoteOutDir)</Command>
     </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

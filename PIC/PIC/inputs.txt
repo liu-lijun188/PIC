@@ -12,7 +12,7 @@ numberOfPatches: 5
 particlesPerPatch: 10
 
 % Some paths
-meshFilePath: gridFile.cas
+meshFilePath: meshFile2.su2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End of input file

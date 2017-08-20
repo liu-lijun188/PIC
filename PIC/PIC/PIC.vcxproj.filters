@@ -256,6 +256,7 @@
     <None Include="gridFile.tgf" />
     <None Include="gridFile.tin" />
     <None Include="gridFile.uns" />
+    <None Include="meshFile2.su2" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libgrid.a">
