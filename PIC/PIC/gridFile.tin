@@ -1,0 +1,71 @@
+// tetin file version 1.1
+// written by WORKBENCH - version 18.1 on Tue Jul 25 17:13:30 2017
+
+set_triangulation_tolerance 0.001
+define_family SYS_1/SYS_SURFACE_1 color 16473139
+define_family SYS_1/SYS_SURFACE_1_MATPOINT color 3368951
+
+prescribed_point 0 0 0.050000000745058 family SYS_1/SYS_SURFACE_1 name VERT41
+prescribed_point 0.10000000149012 0 0.050000000745058 family SYS_1/SYS_SURFACE_1 name VERT38
+prescribed_point 0.10000000149012 0 0 family SYS_1/SYS_SURFACE_1 name VERT39
+prescribed_point 0 0 0 family SYS_1/SYS_SURFACE_1 name VERT40
+define_curve family SYS_1/SYS_SURFACE_1 tetra_size 1e+010 name EDGE34 vertex1 VERT41 vertex2 VERT38 dscell_id 1073741825
+bspline
+2,2,0
+0,0,1,1
+0,0,0.05
+0.1,0,0.05
+define_curve family SYS_1/SYS_SURFACE_1 tetra_size 1e+010 name EDGE35 vertex1 VERT38 vertex2 VERT39 dscell_id 1073741826
+bspline
+2,2,0
+0,0,1,1
+0.1,0,0.05
+0.1,0,0
+define_curve family SYS_1/SYS_SURFACE_1 tetra_size 1e+010 name EDGE36 vertex1 VERT39 vertex2 VERT40 dscell_id 1073741827
+bspline
+2,2,0
+0,0,1,1
+0.1,0,0
+0,0,0
+define_curve family SYS_1/SYS_SURFACE_1 tetra_size 1e+010 name EDGE37 vertex1 VERT40 vertex2 VERT41 dscell_id 1073741828
+bspline
+2,2,0
+0,0,1,1
+0,0,0
+0,0,0.05
+define_surface name FACE33 family SYS_1/SYS_SURFACE_1 tetra_size 1e+010 dscell_id 2147483649 orig_type 0
+trim_surface n_loops 1
+loop n_curves 4
+coedge 3dcurve   EDGE34
+polyline n_points 2
+0.39459074466105,0.71081851067789
+0.39459074466105,0.28918148932211
+coedge 3dcurve   EDGE35
+polyline n_points 2
+0.39459074466105,0.28918148932211
+0.60540925533895,0.28918148932211
+coedge 3dcurve   EDGE36
+polyline n_points 2
+0.60540925533895,0.28918148932211
+0.60540925533895,0.71081851067789
+coedge 3dcurve   EDGE37
+polyline n_points 2
+0.60540925533895,0.71081851067789
+0.39459074466105,0.71081851067789
+bspline
+2,2,2,2,0
+0,0,1,1
+0,0,1,1
+0.16858541476843,0,0.1435854143959
+0.16858541476843,0,-0.093585413650846
+-0.068585413278317,0,0.1435854143959
+-0.068585413278316,0,-0.093585413650846
+affix 0
+define_shell n_surfaces 1 name SYS_1/SYS_SURFACE_1.1 family SYS_1/SYS_SURFACE_1
+FACE33 
+define_lump name SYS_1/SYS_SURFACE_1 family SYS_1/SYS_SURFACE_1 n_shells 1 
+SYS_1/SYS_SURFACE_1.1
+define_solid body n_lumps 1 n_sheets 0 name SYS_1/SYS_SURFACE_1 family SYS_1/SYS_SURFACE_1_MATPOINT
+SYS_1/SYS_SURFACE_1
+define_model 1e+010 reference_size 1 units m
+return

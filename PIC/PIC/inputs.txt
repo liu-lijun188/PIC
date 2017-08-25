@@ -7,12 +7,12 @@
 
 % Some variables
 timeStep: 0.1
-maximumNumberOfIterations: 100 
-numberOfPatches: 3
+maximumNumberOfIterations: 10 
+numberOfPatches: 5
 particlesPerPatch: 10
 
 % Some paths
-meshFilePath: meshData.txt
+meshFilePath: meshFile2.su2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End of input file

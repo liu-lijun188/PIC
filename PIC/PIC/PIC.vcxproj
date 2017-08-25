@@ -45,15 +45,19 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Gcc_4_9</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Gcc_4_9</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -61,7 +65,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <AdditionalSourcesToCopyMapping>C:\Users\rahul_000\Source\Repos\PIC\PIC\PIC\inputs.txt;$(AdditionalSourcesToCopyMapping)</AdditionalSourcesToCopyMapping>
+    <AdditionalSourcesToCopyMapping>$(ProjectDir)libgrid.a;$(ProjectDir)libcomm.a;$(ProjectDir)libmathmk.a;$(ProjectDir)inputs.txt;$(AdditionalSourcesToCopyMapping)</AdditionalSourcesToCopyMapping>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
@@ -88,19 +92,54 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cell.h" />
+    <ClInclude Include="COMM\codelocation.hpp" />
+    <ClInclude Include="COMM\common.hpp" />
+    <ClInclude Include="COMM\commonAPI.hpp" />
+    <ClInclude Include="COMM\error_check.hpp" />
+    <ClInclude Include="COMM\exportAPI.hpp" />
+    <ClInclude Include="COMM\fileHandle.hpp" />
+    <ClInclude Include="COMM\map1D.hpp" />
+    <ClInclude Include="COMM\noncopyable.hpp" />
+    <ClInclude Include="COMM\noninstantiable.hpp" />
+    <ClInclude Include="COMM\processorinfo.hpp" />
+    <ClInclude Include="COMM\timer.hpp" />
+    <ClInclude Include="COMM\utilities.hpp" />
+    <ClInclude Include="COMM\version.hpp" />
+    <ClInclude Include="GRID\cell.hpp" />
     <ClInclude Include="ChargeProjector.h" />
+    <ClInclude Include="COMM\assert_mk.hpp" />
+    <ClInclude Include="COMM\error_codes.hpp" />
+    <ClInclude Include="COMM\error_exception.hpp" />
+    <ClInclude Include="COMM\MultiVector.hpp" />
+    <ClInclude Include="COMM\readdatafromstring.hpp" />
+    <ClInclude Include="COMM\StringOps.hpp" />
+    <ClInclude Include="COMM\VectorCompare.hpp" />
+    <ClInclude Include="GRID\connection.hpp" />
+    <ClInclude Include="GRID\element.hpp" />
     <ClInclude Include="Face.h" />
+    <ClInclude Include="GRID\face.hpp" />
     <ClInclude Include="FDTD.h" />
     <ClInclude Include="FieldInterpolator.h" />
     <ClInclude Include="FieldSolver.h" />
+    <ClInclude Include="GRID\geometry.hpp" />
+    <ClInclude Include="GRID\grid.hpp" />
+    <ClInclude Include="GRID\grid_def.hpp" />
+    <ClInclude Include="GRID\index.hpp" />
+    <ClInclude Include="MATH_MK\cal_area.hpp" />
+    <ClInclude Include="MATH_MK\linear_algebra.hpp" />
+    <ClInclude Include="MATH_MK\math_basic.hpp" />
+    <ClInclude Include="MATH_MK\matrix.hpp" />
+    <ClInclude Include="MATH_MK\random_number_fns.hpp" />
     <ClInclude Include="MCC.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="GRID\node.hpp" />
     <ClInclude Include="Parameters.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticlePusher.h" />
     <ClInclude Include="Patch.h" />
     <ClInclude Include="Simulation.h" />
+    <ClInclude Include="GRID\stencilinfo.hpp" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="VectorCell.h" />
     <ClInclude Include="VectorFace.h" />
@@ -111,7 +150,32 @@
   <ItemGroup>
     <Text Include="inputs.txt" />
   </ItemGroup>
-  <ItemDefinitionGroup />
+  <ItemGroup>
+    <Library Include="libcomm.a" />
+    <Library Include="libgrid.a" />
+    <Library Include="libmathmk.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gridFile.cas" />
+    <None Include="gridFile.cgns" />
+    <None Include="gridFile.msh" />
+    <None Include="gridFile.poly" />
+    <None Include="gridFile.su2" />
+    <None Include="gridFile.tgf" />
+    <None Include="gridFile.tin" />
+    <None Include="gridFile.uns" />
+    <None Include="meshFile2.su2" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <LibraryDependencies>
+      </LibraryDependencies>
+      <AdditionalDependencies>$(StlAdditionalDependencies);%(AdditionalDependencies);$(RemoteRootDir)/$(ProjectName)/libgrid.a;$(RemoteRootDir)/$(ProjectName)/libcomm.a;$(RemoteRootDir)/$(ProjectName)/libmathmk.a</AdditionalDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>cp $(RemoteProjectDir)/{inputs.txt,meshFile2.su2,gridFile.su2,gridFile.cas,gridFile.cgns,gridFile.msh,gridFile.poly,gridFile.tgf,gridFile.tin,gridFile.uns} $(RemoteOutDir)</Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
